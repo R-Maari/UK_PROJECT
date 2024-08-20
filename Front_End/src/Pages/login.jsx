@@ -1,36 +1,68 @@
-import React, { Component } from 'react'
-import { Link } from 'react-router-dom';
-import './authentication.scss'
-import childimg  from '../images/kidlog.jpeg'
+import React, { useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import axios from 'axios';
+import './authentication.scss';
+import childimg from '../images/kidlog.jpeg';
 
-export class login extends Component {
-  render() {
-    return (
-      <div>
-        <div className='register'>
-            <div className='container'>
-            <div className='body-register'>
-            <img src={childimg} alt='childimg' id='img'></img>
+const Login = () => {
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const navigate = useNavigate();  // Initialize useNavigate hook
 
-                <form id='form'>
-                    <h1>Login</h1>
-                    <p id='forlogin'>Already Have an Account <Link to='/register' id='a'>Signup</Link></p>
-                    <label for='email'>Email Address </label><br></br>
-                        <input type='email' id='email' name='email' placeholder='Email' required></input><br></br>
-                   
-                    <label for='password'>Password</label><br></br>
-                        <input  type='password' id='pass' name='pass' placeholder='Password' required></input><br></br>
-                    <p id='fpass'>Forgot Password</p>
-                    <input type='checkbox' id='cbox' ></input><p id='rem'>Remember Me</p><br></br>
-                    <button id='log-btn' >Login</button>
+  const submit = async (e) => {
+    e.preventDefault();
 
-                </form>
-            </div>
-            </div>
+    try {
+      const response = await axios.post('http://localhost:3001/login', {
+        email,
+        pass: password,
+      });
+
+      if (response.status === 200) {
+        alert("Login Successful");
+        navigate('/home');  // Redirect to home.jsx
+      }
+    } catch (err) {
+      alert("Login Failed");
+    }
+  };
+
+  return (
+    <div className='login'>
+      <div className='container'>
+        <div className='body-register'>
+          <form onSubmit={submit} >
+            <h1>Login</h1>
+            <p id='forlogin'>
+              Don't have an account? <Link to='/register' id='a'>Register</Link>
+            </p>
+            <label htmlFor='email'>Email Address</label><br/>
+            <input
+              type='email'
+              id='email'
+              name='email'
+              placeholder='Email'
+              required
+              onChange={(e) => setEmail(e.target.value)}
+            /><br/>
+            <label htmlFor='password'>Password</label><br/>
+            <input
+              type='password'
+              id='password'
+              name='password'
+              placeholder='Password'
+              required
+              onChange={(e) => setPassword(e.target.value)}
+            /><br/>
+            <p id='fpass'>Forgot Password?</p>
+            <input type='checkbox' id='cbox' /><p id='rem'>Remember Me</p><br/>
+            <button id='reg-btn' type='submit'>Login</button>
+          </form>
+          <img src={childimg} alt='childimg' id='img' />
         </div>
       </div>
-    )
-  }
-}
+    </div>
+  );
+};
 
-export default login
+export default Login;
