@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import './Login.css'; // Import the CSS file for styling
+import './login.css'; // Import the CSS file for styling
 
-const Login = () => {
+const Login1 = () => {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
@@ -50,4 +50,4 @@ const Login = () => {
     );
 };
 
-export default Login;
+export default Login1;
