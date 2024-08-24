@@ -30,8 +30,8 @@ export class Index extends Component {
               <li onClick={() => this.scrollToSection('contact-us')}>Contact Us</li>
             </ul>
           </nav>
-          <Link to="./register">
-          <button id='btn'>Register</button>
+          <Link to="./login">
+          <button id='btn'>Login</button>
           </Link>
         </header>
       <div  className='div-container'>
@@ -40,7 +40,7 @@ export class Index extends Component {
           <p id='content-container-body'>
            Theos is a platform that specializes in a range of different key stages and exam boards in GCSE , SATS level to help tutees increase their grades or boost their confidence. All tutors are based throughout the country with varying levels of experience.<br />
           </p>
-          <button id='btn-container-body'>Register Now</button>
+          <Link to="./register"><button id='btn-container-body'>Register Now</button></Link>
         </main>
         </div>
         

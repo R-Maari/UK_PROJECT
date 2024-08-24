@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import './staffreg.scss';
 
 const Staffreg = () => {
   const [formData, setFormData] = useState({
@@ -18,10 +19,20 @@ const Staffreg = () => {
     });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
+    setError('');
+    setSuccess('');
 
-  
+    // Simple validation
+    if (!formData.name || !formData.email || !formData.password) {
+      setError('All fields are required.');
+      return;
+    }
+
+    // Simulate a successful registration
+    setSuccess('Registration successful!');
+  };
 
   return (
     <div>
@@ -68,4 +79,4 @@ const Staffreg = () => {
   );
 };
 
-export default Staffreg
+export default Staffreg;

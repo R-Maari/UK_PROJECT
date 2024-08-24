@@ -3,9 +3,11 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Index from '../src/Pages/index';
 import Register from './Pages/register';
 import Login from "../src/Pages/login";
+import Home from "./Pages/home";
+import Login1 from './Pages/login1';
 import Student from './Pages/student';
 import Tutor from './Pages/tutor';
-import staffreg from './signup page/staffreg';
+import Staffreg from './Pages/staffreg';
 function App() {
   return (
     <Router>
@@ -18,7 +20,7 @@ function App() {
          <Route path='/home' element={<Home />} />
          <Route path='/login1' element={<Login1 />} />
  
-        <Route path='/staffreg' element={<staffreg />} />
+        <Route path='/staffreg' element={<Staffreg />} />
       </Routes>
     </Router>
   );
