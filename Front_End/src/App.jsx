@@ -5,7 +5,7 @@ import Register from '../src/Pages/resgister';
 import Login from "../src/Pages/login";
 import Student from './Pages/student';
 import Tutor from './Pages/tutor';
-
+import staffreg from './signup page/staffreg';
 function App() {
   return (
     <Router>
@@ -15,7 +15,7 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/tutor' element={<Tutor />} />
         <Route path='/student' element={<Student />} />
-
+        <Route path='/staffreg' element={<staffreg />} />
       </Routes>
     </Router>
   );
