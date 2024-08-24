@@ -7,7 +7,7 @@ import axios from 'axios';
 const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();  // Initialize useNavigate hook
+  const navigate = useNavigate();  
 
 
   const submit = async (e) => {
@@ -16,7 +16,7 @@ const Register = () => {
     try {
       const response = await axios.post('http://localhost:3001/register', {
         email,
-        pass: password,  // This must match the backend field name
+        pass: password,  
       });
 
       if (response.status === 201) {
