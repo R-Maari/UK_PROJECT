@@ -5,9 +5,7 @@ import Register from './Pages/register';
 import Login from "../src/Pages/login";
 import Student from './Pages/student';
 import Tutor from './Pages/tutor';
-import Home from './Pages/home';
-import Login1 from './Pages/login1';
- 
+import staffreg from './signup page/staffreg';
 function App() {
   return (
     <Router>
@@ -20,6 +18,7 @@ function App() {
          <Route path='/home' element={<Home />} />
          <Route path='/login1' element={<Login1 />} />
  
+        <Route path='/staffreg' element={<staffreg />} />
       </Routes>
     </Router>
   );
