@@ -4,7 +4,6 @@ import Index from '../src/Pages/index';
 import Register from './Pages/register';
 import Login from "../src/Pages/login";
 import Home from "./Pages/home";
-import Login1 from './Pages/login1';
 import Student from './Pages/student';
 import Tutor from './Pages/tutor';
 import Staffreg from './Pages/staffreg';
@@ -18,7 +17,6 @@ function App() {
         <Route path='/tutor' element={<Tutor />} />
         <Route path='/student' element={<Student />} />
          <Route path='/home' element={<Home />} />
-         <Route path='/login1' element={<Login1 />} />
  
         <Route path='/staffreg' element={<Staffreg />} />
       </Routes>

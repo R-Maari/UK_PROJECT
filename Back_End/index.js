@@ -10,7 +10,7 @@ app.use(cors());
 const port = 3001;
 
 // MongoDB connection
-mongoose.connect('mongodb://localhost:27017/Thoes', {
+mongoose.connect('mongodb://localhost:27017/Theos', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
