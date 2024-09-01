@@ -20,7 +20,7 @@ export class Index extends Component {
       <div>
         <header id='home1' className='container'>
           <img src={logo} alt='Theos Educational Academy Logo' />
-          <h1>Theos Educational Academy <br></br><span id='tp'> Thriving and Perfection</span></h1>
+          <h1>Theos Educational Academy <br></br><span id='tp'> Thriving for Perfection</span></h1>
           <nav id='nav'>
             <ul>
               <li onClick={() => this.scrollToSection('subjects')}>Subjects</li>
