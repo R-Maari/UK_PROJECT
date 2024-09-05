@@ -1,0 +1,194 @@
+*{
+    background-color: rgba(208,175,98,255);
+    margin: 0;
+    padding: 0;
+}
+body{
+    box-sizing: border-box;
+    margin: 0;
+}
+.container{
+     background-color: rgba(208,175,98,255);
+     display: flex;
+     flex-wrap: wrap;
+
+     img{
+        height: 80px;
+        width: 80px;
+        margin-left: 60px;
+        margin-top: 30px;
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px;
+     }
+     #logo-first-name{
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        margin-top: -80px;
+        margin-left: 170px;
+     }
+     #logo-second-name{
+        color: white;
+        position: absolute;
+        font-size: 16px;
+        margin-top: -75px;
+        margin-left: 190px;
+     }
+    
+    }
+#nav-bar-list{
+    display: flex;
+    margin-top: -100px;
+    margin-left: 500px;
+    flex-wrap: wrap;
+    gap: 30px;
+
+ li{
+    list-style: none;
+    color: black;
+    cursor: pointer;
+    justify-content: space-evenly;
+
+}
+li:hover{
+    color: white;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: white;
+    width: 10%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px;
+    margin-left: -30px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dropright-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    margin-left: 0px; 
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    border-radius: 4px;
+  }
+  .dropright {
+    position: relative;
+  }
+  .dropdown-content li {
+    padding: 8px 12px;
+    text-align: center;
+    background-color: white;
+    color: black;
+    border-radius: 10px;
+
+  }
+  .dropright:hover .dropright-content {
+    display: block; 
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block; 
+    border-radius: 10px;
+}  
+.dropdown-content li:hover,
+ .dropright-content li:hover {
+  background-color:  transparent;
+  color:  rgba(208,175,98,255); 
+}
+  #arrowright{
+    background-color: transparent;
+  }
+#login-btn{
+    height: 6vh;
+    width: 120px;
+    margin-top: -10px;
+    margin-left: 40px;
+    border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    color:  rgba(208,175,98,255);   
+}
+#login-btn:hover{
+    background-color:  black;
+    color:  rgba(208,175,98,255);;
+}
+#toll-free{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: -2px;
+    cursor: pointer;
+    color: black;
+
+}
+#toll-free:hover{
+    color: white;
+}
+#phone-tooltip{
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 13px;
+}
+}
+
+.tutionlivecheck{
+    background-color: white;
+    margin-left: 20%;
+    margin-top: 3%;
+    border-radius: 15px;
+    display: flex;
+    height: 8vh;
+    width: 60%;
+
+    #check{
+        background-color: white;
+        margin-top: 13px;
+        margin-left: 150px;
+        font-size: 15px;
+        justify-content: center;
+        padding: 5px;
+        word-spacing: 2px;
+    }
+    #check-btn{
+        height: 6vh;
+        width: 20%;
+        background-color: white;
+        font-size: 16px;
+        color: rgba(208,175,98,255);
+        letter-spacing: 2px;
+        border: 1px solid rgba(208,175,98,255);
+        border-radius: 20px;
+        margin-left: 50px;
+        cursor: pointer;
+        margin-top: 7px;
+    }
+    #check-btn:hover{
+        background-color: rgba(208,175,98,255);
+        color: white;
+    }
+    #cross{
+        background-color: transparent;
+        cursor: pointer;
+        margin-left: 110px;
+        margin-top: 7px;
+        background-color: black;
+        color: white;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        padding: 1px;
+        }
+    
+}
