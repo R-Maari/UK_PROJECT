@@ -9,13 +9,17 @@ export class Index extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      showTutionCheck: true // State to control visibility
+      showTutionCheck: true ,
+      ads:true
     };
   }
 
   handleHideClick = () => {
-    this.setState({ showTutionCheck: false }); // Hide the div
+    this.setState({ showTutionCheck: false }); 
   };
+  hadleads=()=>{
+    this.setState({ads:false});
+  }
 
   render() {
     return (
@@ -83,7 +87,25 @@ export class Index extends Component {
               <FontAwesomeIcon id='cross' icon={faClose} onClick={this.handleHideClick} />
             </div>
           )}
+
+      {this.state.ads && (
+
+          <div className='ads'>
+            <div className='ads-content'>
+              
+               {/* <img src='' alt='ads-1'></img> */}
+              {/*<img src={} alt='ads-2'></img>
+              <img src={} alt='ads-3'></img>
+              <img src={} alt='ads-4'></img>
+              <img src={} alt='ads-5'></img> */}
+              <FontAwesomeIcon id='ads-cross' icon={faClose} onClick={this.hadleads} />
+
+            </div>
+          </div>
+)}
         </div>
+
+
       </div>
     );
   }
