@@ -1,88 +1,111 @@
 import React, { Component } from 'react';
-import logo from "../images/theos.png";
-import indeximg from "../images/index-img.jpg";
-import "./index.scss";
+import './index.scss';
+import Logo from '../images/theos.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBook } from '@fortawesome/free-solid-svg-icons';
-import { Link } from 'react-router-dom';
-
+import { faCaretDown, faCaretRight, faClose, faPhone } from '@fortawesome/free-solid-svg-icons';
+import { Tooltip } from 'react-tooltip';
 
 export class Index extends Component {
-  scrollToSection = (id) => {
-    const section = document.getElementById(id);
-    if (section) {
-      section.scrollIntoView({ behavior: 'smooth' });
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      showTutionCheck: true ,
+      ads:true
+    };
+  }
+
+  handleHideClick = () => {
+    this.setState({ showTutionCheck: false }); 
   };
+  hadleads=()=>{
+    this.setState({ads:false});
+  }
 
   render() {
     return (
       <div>
-        <header id='home1' className='container'>
-          <img src={logo} alt='Theos Educational Academy Logo' />
-          <h1>Theos Educational Academy <br></br><span id='tp'> Thriving for Perfection</span></h1>
-          <nav id='nav'>
-            <ul>
-              <li onClick={() => this.scrollToSection('subjects')}>Subjects</li>
-              <li onClick={() => this.scrollToSection('services')}>Services</li>
-              <li onClick={() => this.scrollToSection('explore')}>Explore</li>
-              <li onClick={() => this.scrollToSection('about-us')}>About Us</li>
-              <li onClick={() => this.scrollToSection('contact-us')}>Contact Us</li>
-            </ul>
-          </nav>
-          <Link to="./login">
-          <button id='btn'>Login</button>
-          </Link>
-        </header>
-      <div  className='div-container'>
-        <main className='container-body'>
-          <img src={indeximg} alt='Theos Academy Overview' />
-          <p id='content-container-body'>
-           Theos is a platform that specializes in a range of different key stages and exam boards in GCSE , SATS level to help tutees increase their grades or boost their confidence. All tutors are based throughout the country with varying levels of experience.<br />
-          </p>
-          <Link to="./register"><button id='btn-container-body'>Register Now</button></Link>
-        </main>
-        </div>
-        
-        <button id='enquiry'>Enquiry</button>
+        <div className='container'>
+          <header className='nav-bar'>
+            <img src={Logo} alt='logo' />
+            <p id='logo-name'>
+              <span id='logo-first-name'>Theos Education Academy</span>
+              <br />
+              <span id='logo-second-name'>Thriving For Perfection</span>
+            </p>
+            <nav id='nav-bar-list'>
+              <li className="dropdown">
+                Classes <FontAwesomeIcon icon={faCaretDown} />
+                <ul className="dropdown-content">
+                  <li className='dropright'>Online <FontAwesomeIcon id='arrowright' icon={faCaretRight} />
+                    <ul className='dropright-content'>
+                      <li>Theos Education Academy</li>
+                    </ul>
+                  </li>
+                  <li className='dropright'>Offline <FontAwesomeIcon id='arrowright' icon={faCaretRight} />
+                    <ul className='dropright-content'>
+                      <li>UK England</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li className="dropdown">
+                Subjects <FontAwesomeIcon icon={faCaretDown} />
+                <ul className="dropdown-content">
+                  <li>Math <FontAwesomeIcon id='arrowright' icon={faCaretRight} /></li>
+                  <li>Science <FontAwesomeIcon id='arrowright' icon={faCaretRight} /></li>
+                  <li>History <FontAwesomeIcon id='arrowright' icon={faCaretRight} /></li>
+                </ul>
+              </li>
+              <li className="dropdown">
+                TTC <FontAwesomeIcon icon={faCaretDown} />
+                <ul className="dropdown-content">
+                  <li>UK England <FontAwesomeIcon id='arrowright' icon={faCaretRight} /></li>
+                  <li>TN India <FontAwesomeIcon id='arrowright' icon={faCaretRight} /></li>
+                </ul>
+              </li>
+              <li className='dropdown'>
+                Exams <FontAwesomeIcon icon={faCaretDown} />
+                <ul className='dropdown-content'>
+                  <li>NEET <FontAwesomeIcon id='arrowright' icon={faCaretRight} /></li>
+                  <li>VIT <FontAwesomeIcon id='arrowright' icon={faCaretRight} /></li>
+                </ul>
+              </li>
+              <li>
+                Success Stories
+              </li>
+              <button id='login-btn'>Login</button>
+              <a href="tel:+919778550817" data-tooltip-id="phone-tooltip" data-tooltip-content="+919778550817">
+                <FontAwesomeIcon id='toll-free' icon={faPhone} />
+              </a>
+              <Tooltip id="phone-tooltip" place="bottom" type="dark" effect="solid" />
+            </nav>
+          </header>
+          {this.state.showTutionCheck && (
+            <div className='tutionlivecheck'>
+              <p id='check'>Online Live Tuition Classes Year 2024 - 2025 </p>
+              <button id='check-btn'>Check</button>
+              <FontAwesomeIcon id='cross' icon={faClose} onClick={this.handleHideClick} />
+            </div>
+          )}
 
-        <div id='subjects' className='features'>
-          <h1>Our Subjects</h1>
-          <div className='body-subjects'>
-            <h2>Exam Boards <FontAwesomeIcon icon={faBook} /></h2>
-            <p id='examboards'>Hello World</p>
-            <p id='content-sub'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat enim nisi aliquid, veniam vel pariatur aperiam cumque obcaecati soluta, ipsum, exercitationem magni necessitatibus quibusdam blanditiis esse tempore quidem magnam accusantium!</p>
+      {this.state.ads && (
 
+          <div className='ads'>
+            <div className='ads-content'>
+              
+               {/* <img src='' alt='ads-1'></img> */}
+              {/*<img src={} alt='ads-2'></img>
+              <img src={} alt='ads-3'></img>
+              <img src={} alt='ads-4'></img>
+              <img src={} alt='ads-5'></img> */}
+              <FontAwesomeIcon id='ads-cross' icon={faClose} onClick={this.hadleads} />
 
-
+            </div>
           </div>
-          <div className='body-subjects'>
-          <h2>Exam Boards <FontAwesomeIcon icon={faBook} /></h2>
-            <p id='examboards'>Hello World</p>
-            <p id='content-sub'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat enim nisi aliquid, veniam vel pariatur aperiam cumque obcaecati soluta, ipsum, exercitationem magni necessitatibus quibusdam blanditiis esse tempore quidem magnam accusantium!</p>
-
-            
-          </div>
-          <div className='body-subjects'>
-          <h2>Exam Boards <FontAwesomeIcon icon={faBook} /></h2>
-            <p id='examboards'>Hello World</p>
-            <p id='content-sub'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat enim nisi aliquid, veniam vel pariatur aperiam cumque obcaecati soluta, ipsum, exercitationem magni necessitatibus quibusdam blanditiis esse tempore quidem magnam accusantium!</p>
+)}
+        </div>
 
 
-            
-          </div>
-        </div>
-        <div className='services' id='services'>
-        <div id='explore' className='explore'>
-
-        </div>
-        </div>
-        <div id='about-us' className='about'>
-          {/* About Us content here */}
-        </div>
-        <div id='contact-us' className='contact'>
-          {/* Contact Us content here */}
-        </div>
       </div>
     );
   }

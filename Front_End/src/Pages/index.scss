@@ -1,229 +1,234 @@
 @font-face {
-    font-family: MyCustom1;
-    src: url("../Fonts/hamston/Hamston.ttf");
+  font-family: MyCustom;
+  src: url("../Fonts/source-sans-pro/SourceSansPro-Black.ttf");
 }
+
 @font-face {
-    font-family: MyCustom2;
-    src: url("../Fonts/modern-monarch-demo/Modern\ Monarch\ DEMO.ttf");
-}
-@font-face {
-    font-family:MyCustom3 ;
-    src: url("../Fonts/huxtable/Huxtable.otf");
-}
-@font-face {
-    font-family: MyCustom4;
-    src: url("../Fonts/antipasto/AntipastoPro-Thin_trial\ 2.ttf");
+  font-family: MyCustom1;
+  src: url("../Fonts/source-sans-pro/SourceSansPro-ExtraLight.ttf");
 }
 *{
+    background-color: rgba(208,175,98,255);
     margin: 0;
     padding: 0;
+}
+body{
     box-sizing: border-box;
+    margin: 0;
 }
-#home1{
-    height: 15vh;
-    width: 100%;
-    top: -16%;
-    left: -3.5%;
-    z-index: 993939;
-    position: fixed;
-    display: flex;
-    background-color: white;
-    box-shadow: 0px 0px 8px black;
-    animation: top 1s 1;
-}
-@keyframes top {
-    from{
-        top: -50%;
-        opacity: 0;
-    }
-    to{
-        top: -16%;
-        opacity: 1;
-    }
-}
-.container img{
-    height: 100px;
-    width: 100px;
-    margin-left: 30px;
-    margin-top: 0px;
-    cursor: pointer;
-}
-.container h1{
-   margin-top: 30px;
-   font-size: 25px;
-   letter-spacing: 0.5px;
-   margin-left: 10px;
-   font-family: MyCustom1;
-    color: rgba(208,175,98,255);
-}
-.container #tp{
-    font-size: 20px;
-    margin-left: 35px;
-    font-family: none;
-    font-weight: lighter;
-}
-#nav {
-margin-left: 250px;
-margin-top: 50px;
+.container{
+  position: fixed;
+       display: flex;
+     flex-wrap: wrap;
+     height: 20vh;
 
-}
-#nav ul{
+     img{
+        height: 80px;
+        width: 80px;
+        margin-left: 60px;
+        margin-top: 30px;
+        background-color: white;
+        border-radius: 50%;
+        padding: 10px;
+     }
+     #logo-first-name{
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        margin-top: -80px;
+        margin-left: 170px;
+        font-family: MyCustom;
+     }
+     #logo-second-name{
+        color: white;
+        position: absolute;
+        font-size: 16px;
+        margin-top: -75px;
+        margin-left: 190px;
+        font-family: MyCustom1;
+     }
+    
+    }
+#nav-bar-list{
     display: flex;
+    margin-top: -100px;
+    margin-left: 500px;
+    flex-wrap: wrap;
     gap: 30px;
-    list-style:  none;
-    
-}
-#nav ul li{
-    color: goldenrod;
-    font-size: 23px;
-    cursor: pointer;
-    font-weight: lighter;
-    font-family: MyCustom2;
-}
-#nav ul li:hover{
+
+ li{
+    list-style: none;
     color: black;
-}
-.container  #btn{
-    height: 6vh;
-    width: 150%;
-    margin-top: 36px;
     cursor: pointer;
-    margin-left: 30px;
-    background-color: rgba(208,175,98,255);
-    color: black;
-    border: none;
-    border-radius: 10px;
+    justify-content: space-evenly;
 
 }
-.container #btn:hover{
+li:hover{
     color: white;
- }
+}
 
- /* index.scss */
-
-
-.container-body {
+.dropdown-content {
+    display: none;
     position: absolute;
-    top: 20%;
-    left: -10%;
-    height: 60%;
-    width: 100%;
-    color: white;
-    
-    
-   
-}
-
-.container-body img{
-    border-radius: 20px;
-    margin-top: 60px;
-    margin-left:300px;
-    height: 300px;
-    width: 300px;
-    padding: 2px;
-    border: 2px solid  rgba(208,175,98,255);
-    animation: slide1 1s 1;
-}
-@keyframes slide1 {
-    from{
-        margin-left : -300px;
-    }
-    to{
-        margin-left: 300px;
-    }
-}
-
-.container-body #btn-container-body{
-    position: absolute;
-    top: 70%;
-    height: 7vh;
-    width: 20%;
-    margin-left:20%;
-    border: none;
-    cursor: pointer;
-    background-color: rgba(208,175,98,255);
-    color:black;
-    font-size: 20px;
-    border-radius: 10px;
-    animation: beat 1s infinite;
-
-}
-
-.container-body #content-container-body{
-    position: absolute;
-    left:55%;
-    top: 20%;
-    margin-top: 20px;
+    background-color: white;
+    width: 10%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: 5px;
     margin-left: -30px;
-    width: 50vw;
-    height: auto;
-    font-size:23px;
-    font-weight: lighter;
-    word-spacing: 5px;
+    list-style: none;
+    padding: 0;
+  }
+  
+  .dropright-content {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 100%; 
+    margin-left: 0px; 
+    background-color: white;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    list-style: none;
+    padding: 0;
+    border-radius: 4px;
+  }
+  .dropright {
+    position: relative;
+  }
+  .dropdown-content li {
+    padding: 8px 12px;
+    text-align: center;
     background-color: white;
     color: black;
-    font-family: MyCustom3;
-    background: transparent;
-    animation: slide 1s 1;
-}
-@keyframes slide {
-    from{
-        top: -20%;
-    }
-    to{
-        top: 20%;
-    }
-}
+    border-radius: 10px;
 
-#enquiry{
-    position: fixed;
-    left:88%;
-    border-radius: 10%;
-    top: 93%;
-    padding: 10px 50px;
-    cursor: pointer;
-    background-color: goldenrod;
+  }
+  .dropright:hover .dropright-content {
+    display: block; 
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block; 
+    border-radius: 10px;
+}  
+.dropdown-content li:hover,
+ .dropright-content li:hover {
+  background-color:  transparent;
+  color:  rgba(208,175,98,255); 
+}
+  #arrowright{
+    background-color: transparent;
+  }
+#login-btn{
+    height: 6vh;
+    width: 120px;
+    margin-top: -10px;
+    margin-left: 40px;
     border: none;
+    font-size: 1.1rem;
+    cursor: pointer;
+    background-color: white;
+    border-radius: 10px;
+    color:  rgba(208,175,98,255);   
 }
-@keyframes beat {
-    from{
-        transform: scale(0.8);
-    }
-    to{
-        transform: scale(1);
-        top: 70%;
-    }
-    
+#login-btn:hover{
+    background-color:  black;
+    color:  rgba(208,175,98,255);;
 }
+#toll-free{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: -2px;
+    cursor: pointer;
+    color: black;
 
-
-.features{
-    position: absolute;
-    top: 110%;
-    left: 5%;
-    width: 80%;
-    justify-content: space-evenly;
-    display: flex;
-    height: auto;
+}
+#toll-free:hover{
     color: white;
-    gap: 2%;
 }
-#subjects h1{
-    position: relative;
-    color: black;
-    left: 50%;
+#phone-tooltip{
+    position: absolute;
+    margin-top: -10px;
+    margin-left: 13px;
+}
+}
+
+
+.tutionlivecheck{
+  position: fixed;
+    background-color: white;
+    margin-left: 20%;
+    margin-top: 10%;
+    border-radius: 15px;
+    display: flex;
+    height: 8vh;
+    width: 60%;
+
+    #check{
+        background-color: white;
+        margin-top: 13px;
+        margin-left: 150px;
+        font-size: 15px;
+        justify-content: center;
+        padding: 5px;
+        word-spacing: 2px;
+    }
+    #check-btn{
+        height: 6vh;
+        width: 20%;
+        background-color: white;
+        font-size: 16px;
+        color: rgba(208,175,98,255);
+        letter-spacing: 2px;
+        border: 1px solid rgba(208,175,98,255);
+        border-radius: 20px;
+        margin-left: 50px;
+        cursor: pointer;
+        margin-top: 7px;
+    }
+    #check-btn:hover{
+        background-color: rgba(208,175,98,255);
+        color: white;
+    }
+    #cross{
+        background-color: transparent;
+        cursor: pointer;
+        margin-left: 110px;
+        margin-top: 7px;
+        background-color: black;
+        color: white;
+        height: 10px;
+        width: 10px;
+        border-radius: 50%;
+        padding: 1px;
+        }
     
-    margin-top: -90px;
-    font-size: 25px;
-    width: 100%;
-
-}
-.features .body-subjects{
-    background-color: rgba(208,175,98,255);
-    border-radius: 20px;
-    color: black;
-    height: auto;
-    padding: 10px;
-    margin: 10px;
 }
 
+.ads{
+  position: fixed;
+  height: 25vh;
+  background-color: white;
+  width: 70%;
+  margin:100px;
+ top: 15%;
+ margin-left: 200px;
+ border-radius: 10px;
+
+  #ads-cross{
+    position: absolute;
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 97%;
+    margin-top: 15px;
+    background-color: black;
+    color: white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    padding: 1px;
+    }
+
+}
