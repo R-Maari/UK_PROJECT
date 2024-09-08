@@ -1,6 +1,8 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Index from './Pages/index'; // Adjusted the path for consistency
+import Index from './Pages/index';
+import StaffRegistration from './Pages/staffregistration';
+
 
 
 function App() {
@@ -8,6 +10,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Index />} />
+        <Route path="/staffregistration" element={<StaffRegistration />} />
       
       </Routes>
     </Router>
