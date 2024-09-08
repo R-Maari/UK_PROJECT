@@ -4,6 +4,8 @@ import Logo from '../images/theos.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCaretDown, faCaretRight, faClose, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { Tooltip } from 'react-tooltip';
+import { Link } from 'react-router-dom';
+import StaffRegistration from './staffregistration';
 
 export class Index extends Component {
   constructor(props) {
@@ -131,7 +133,7 @@ export class Index extends Component {
                   <option value={+93}>+93</option>
                 </select>
                 <input type='text' required id='phone' name='phone' placeholder='1234567890'></input>
-                <button id='student-submit-btn'>Register</button><br></br>
+                <button id='student-submit-btn'><Link to={Index}>Register</Link></button><br></br>
               </form>
             )}
 
@@ -150,7 +152,7 @@ export class Index extends Component {
                   <option value={+93}>+93</option>
                 </select>
                 <input type='text' required id='phone' name='phone' placeholder='1234567890'></input>
-                <button id='staff-submit-btn'>Register</button>
+                <button id='staff-submit-btn'><Link to={StaffRegistration}>Register</Link></button>
               </form>
             )}
           </div>

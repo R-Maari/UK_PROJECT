@@ -33,6 +33,7 @@ body {
   background-color: black; 
   border-radius: 6px; 
 }
+
 header{
   position: fixed;
   z-index: 100000;
@@ -306,8 +307,10 @@ li:hover{
     border: none;
     border-radius: 10px;
   }
+  
 
   button{
+    
     margin-top: 50px;
     margin-left: 40px;
     padding: 10px 150px;
@@ -316,6 +319,10 @@ li:hover{
     border-radius: 10px;
     margin-bottom: 30px;
 
+  }
+  button a{
+    text-decoration: none;
+    color: black;
   }
   option{
     background-color: white;
