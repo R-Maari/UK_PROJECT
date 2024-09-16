@@ -7,20 +7,46 @@
   font-family: MyCustom1;
   src: url("../Fonts/source-sans-pro/SourceSansPro-ExtraLight.ttf");
 }
-*{
-    background-color: rgba(208,175,98,255);
-    margin: 0;
-    padding: 0;
+* {
+  background-color: rgba(208, 175, 98, 255);
+  margin: 0;
+  padding: 0;
+  scrollbar-width: thin; 
+  scrollbar-color: black rgba(208, 175, 98, 255);
 }
-body{
-    box-sizing: border-box;
-    margin: 0;
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  overflow-y: scroll; 
 }
-.container{
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(208, 175, 98, 255); 
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: black; 
+  border-radius: 6px; 
+}
+
+header{
   position: fixed;
+  z-index: 100000;
+  background-color: rgba(208,175,98,255); 
+  height: 23vh;
+}
+
+.container{
+  position: relative;
        display: flex;
      flex-wrap: wrap;
      height: 20vh;
+     background-color: rgba(208,175,98,255); ;
 
      img{
         height: 80px;
@@ -135,7 +161,7 @@ li:hover{
 }
 #login-btn:hover{
     background-color:  black;
-    color:  rgba(208,175,98,255);;
+    color:  rgba(208,175,98,255);
 }
 #toll-free{
     font-size: 20px;
@@ -157,10 +183,10 @@ li:hover{
 
 
 .tutionlivecheck{
-  position: fixed;
+  position: relative;
     background-color: white;
     margin-left: 20%;
-    margin-top: 10%;
+    margin-top: 12%;
     border-radius: 15px;
     display: flex;
     height: 8vh;
@@ -168,7 +194,7 @@ li:hover{
 
     #check{
         background-color: white;
-        margin-top: 13px;
+        margin-top: 10px;
         margin-left: 150px;
         font-size: 15px;
         justify-content: center;
@@ -208,12 +234,12 @@ li:hover{
 }
 
 .ads{
-  position: fixed;
+  position: absolute;
   height: 25vh;
   background-color: white;
   width: 70%;
   margin:100px;
- top: 15%;
+ top: 60%;
  margin-left: 200px;
  border-radius: 10px;
 
@@ -232,3 +258,81 @@ li:hover{
     }
 
 }
+
+
+.form{
+  background-color: white;
+  height: 100%;
+  width: 40%;
+  z-index: 10000;
+  position: absolute;
+  top: 300%;
+  left: 55%;  
+  border-radius: 10px;
+
+  #staffbtn,#studentbtn{
+    background-color: white;
+    color: black;
+    padding: 10px 82px;
+    margin: 20px;
+    border: 1px solid gold;
+    border-radius: 20px;
+  }
+  form{
+    background-color: white;
+  }
+  label {
+    position: relative;
+    background: transparent;
+    margin-left: 80px;
+    margin-top: 20px;
+    display: block; /* Ensures margin-top works as expected */
+  }
+  input{
+    position: absolute;
+    margin-left: 200px;
+    border: 1px solid rgba(208,175,98,255); ;
+    padding:8px;
+    margin-top: -25px;
+    width: 18vw;
+    border-radius: 10px;
+    background-color: white;
+  }  
+  select {
+    position: relative;
+    left: 37%;
+    transform: translateY(-275%);
+    padding: 5px;
+    background-color: white;
+    border: none;
+    border-radius: 10px;
+  }
+  
+
+  button{
+    
+    margin-top: 50px;
+    margin-left: 40px;
+    padding: 10px 150px;
+    background-color:rgba(208,175,98,255);
+    border: none;
+    border-radius: 10px;
+    margin-bottom: 30px;
+
+  }
+  button a{
+    text-decoration: none;
+    color: black;
+  }
+  option{
+    background-color: white;
+  }
+
+}
+.form input:focus{
+  outline: none;
+}
+
+
+
+
