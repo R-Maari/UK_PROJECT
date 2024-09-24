@@ -1,0 +1,83 @@
+
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    height: 100%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px #0000001a;
+  }
+  
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .form-group {
+    margin-bottom: 15px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="tel"],
+  input[type="date"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+  
+  input[type="text"]:focus,
+  input[type="tel"]:focus,
+  input[type="date"]:focus,
+  textarea:focus {
+    border-color: #e9ecf0;
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .dropzone {
+    border: 2px dashed #dfe2e6;
+    border-radius: 4px;
+    padding: 20px;
+    text-align: center;
+    cursor: pointer;
+    transition: border-color 0.3s;
+  }
+  
+  .dropzone:hover {
+    border-color: #e4e8ec;
+  }
+  
+  button {
+    background-color: #eff2f5;
+    color: rgb(220, 236, 73);
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    width: 100%;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+  }
+  

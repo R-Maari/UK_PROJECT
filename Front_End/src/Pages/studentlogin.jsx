@@ -1,9 +1,10 @@
 import React from 'react';
-import { useForm, Controller } from 'react-hook-form';
+import { useForm } from 'react-hook-form';
 import { useDropzone } from 'react-dropzone';
+import './studentlogin.scss';
 
-const StudentLoginPage = () => {
-  const { control, handleSubmit, register } = useForm();
+const StudentLogin = () => {
+  const {  handleSubmit, register } = useForm();
 
   const onDrop = (acceptedFiles) => {
     // Handle file upload here
@@ -18,7 +19,7 @@ const StudentLoginPage = () => {
   };
 
   return (
-    <div className="container">
+    <div className="container" >
       <h2>Student Login</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
         <div className="form-group">
@@ -50,7 +51,7 @@ const StudentLoginPage = () => {
             {...register('parentPhone', { required: true })}
           />
         </div>
-
+        <button type="submit">Next</button>
         <div className="form-group">
           <label htmlFor="dateOfBirth">Date of Birth:</label>
           <input
@@ -69,7 +70,7 @@ const StudentLoginPage = () => {
             {...register('address', { required: true })}
           ></textarea>
         </div>
-
+        <button type="submit">Next</button>
         <div className="form-group">
           <label>Upload Photo:</label>
           <div {...getRootProps({ className: 'dropzone' })}>
@@ -99,9 +100,11 @@ const StudentLoginPage = () => {
         </div>
 
         <button type="submit">Next</button>
+        
       </form>
     </div>
   );
 };
 
-export default studentlogin;
+export default StudentLogin;
+
