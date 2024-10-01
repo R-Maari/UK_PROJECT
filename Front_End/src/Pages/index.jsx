@@ -7,6 +7,7 @@ import { Tooltip } from 'react-tooltip';
 import { Link } from 'react-router-dom';
 import StaffRegistration from './staffregistration';
 
+
 export class Index extends Component {
   constructor(props) {
     super(props);
