@@ -2,6 +2,9 @@ import React, { Component } from 'react'
 import Logo from "../images/theos.png";
 import Sideimage from "../images/bgimg.jpg";
 import "./studentlogin.scss";
+const YourComponent = () => {
+  const [username, setUsername] = useState('');
+};
 
 export class studentlogin extends Component {
   render() {
@@ -19,7 +22,14 @@ export class studentlogin extends Component {
 
         <div className='form-container'>
           <h1>STUDENT LOGIN</h1>
-
+          <form>
+            <label><h3>username</h3></label>
+            <input
+                  tyep="text"
+                  id="username"
+                  value={username}
+             />
+          </form>
         </div>
 
       </div>
