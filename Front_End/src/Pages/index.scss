@@ -7,93 +7,84 @@
   font-family: MyCustom1;
   src: url("../Fonts/source-sans-pro/SourceSansPro-ExtraLight.ttf");
 }
+
 * {
   background-color: rgba(208, 175, 98, 255);
   margin: 0;
   padding: 0;
-  scrollbar-width: thin; 
-  scrollbar-color: black rgba(208, 175, 98, 255);
+
 }
 
 body {
   box-sizing: border-box;
   margin: 0;
-  overflow-y: scroll; 
 }
 
-::-webkit-scrollbar {
-  width: 12px;
-}
-
-::-webkit-scrollbar-track {
-  background: rgba(208, 175, 98, 255); 
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: black; 
-  border-radius: 6px; 
-}
-
-header{
+header {
   position: fixed;
   z-index: 100000;
-  background-color: rgba(208,175,98,255); 
+  background-color: rgba(208, 175, 98, 255);
   height: 23vh;
 }
 
-.container{
+.container {
   position: relative;
-       display: flex;
-     flex-wrap: wrap;
-     height: 20vh;
-     background-color: rgba(208,175,98,255); ;
+  display: flex;
+  flex-wrap: wrap;
+  height: 20vh;
+  background-color: rgba(208, 175, 98, 255);
+  ;
 
-     img{
-        height: 80px;
-        width: 80px;
-        margin-left: 60px;
-        margin-top: 30px;
-        background-color: white;
-        border-radius: 50%;
-        padding: 10px;
-     }
-     #logo-first-name{
-        color: white;
-        font-size: 20px;
-        position: absolute;
-        margin-top: -80px;
-        margin-left: 170px;
-        font-family: MyCustom;
-     }
-     #logo-second-name{
-        color: white;
-        position: absolute;
-        font-size: 16px;
-        margin-top: -75px;
-        margin-left: 190px;
-        font-family: MyCustom1;
-     }
-    
-    }
-#nav-bar-list{
-    display: flex;
-    margin-top: -100px;
-    margin-left: 500px;
-    flex-wrap: wrap;
-    gap: 30px;
+  img {
+    height: 80px;
+    width: 80px;
+    margin-left: 60px;
+    margin-top: 30px;
+    background-color: white;
+    border-radius: 50%;
+    padding: 10px;
+  }
 
- li{
+  #logo-first-name {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    margin-top: -80px;
+    margin-left: 170px;
+    font-family: MyCustom;
+  }
+
+  #logo-second-name {
+    color: white;
+    position: absolute;
+    font-size: 16px;
+    margin-top: -75px;
+    margin-left: 190px;
+    font-family: MyCustom1;
+  }
+
+}
+
+#nav-bar-list {
+  display: flex;
+  margin-top: -100px;
+  margin-left: 500px;
+  flex-wrap: wrap;
+  gap: 30px;
+
+  li {
     list-style: none;
     color: black;
     cursor: pointer;
     justify-content: space-evenly;
 
-}
-li:hover{
-    color: white;
-}
+  }
 
-.dropdown-content {
+  li:hover {
+    color: white;
+  }
+
+  .dropdown-content {
     display: none;
     position: absolute;
     background-color: white;
@@ -105,13 +96,13 @@ li:hover{
     list-style: none;
     padding: 0;
   }
-  
+
   .dropright-content {
     display: none;
     position: absolute;
     top: 0;
-    left: 100%; 
-    margin-left: 0px; 
+    left: 100%;
+    margin-left: 0px;
     background-color: white;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
@@ -120,9 +111,11 @@ li:hover{
     padding: 0;
     border-radius: 4px;
   }
+
   .dropright {
     position: relative;
   }
+
   .dropdown-content li {
     padding: 8px 12px;
     text-align: center;
@@ -131,23 +124,27 @@ li:hover{
     border-radius: 10px;
 
   }
+
   .dropright:hover .dropright-content {
-    display: block; 
+    display: block;
   }
-  
+
   .dropdown:hover .dropdown-content {
-    display: block; 
+    display: block;
     border-radius: 10px;
-}  
-.dropdown-content li:hover,
- .dropright-content li:hover {
-  background-color:  transparent;
-  color:  rgba(208,175,98,255); 
-}
-  #arrowright{
+  }
+
+  .dropdown-content li:hover,
+  .dropright-content li:hover {
+    background-color: transparent;
+    color: rgba(208, 175, 98, 255);
+  }
+
+  #arrowright {
     background-color: transparent;
   }
-#login-btn{
+
+  #login-btn {
     height: 6vh;
     width: 120px;
     margin-top: -10px;
@@ -157,93 +154,100 @@ li:hover{
     cursor: pointer;
     background-color: white;
     border-radius: 10px;
-    color:  rgba(208,175,98,255);   
-}
-#login-btn:hover{
-    background-color:  black;
-    color:  rgba(208,175,98,255);
-}
-#toll-free{
+    color: rgba(208, 175, 98, 255);
+  }
+
+  #login-btn:hover {
+    background-color: black;
+    color: rgba(208, 175, 98, 255);
+  }
+
+  #toll-free {
     font-size: 20px;
     margin-left: 20px;
     margin-top: -2px;
     cursor: pointer;
     color: black;
 
-}
-#toll-free:hover{
+  }
+
+  #toll-free:hover {
     color: white;
-}
-#phone-tooltip{
+  }
+
+  #phone-tooltip {
     position: absolute;
     margin-top: -10px;
     margin-left: 13px;
-}
+  }
 }
 
 
-.tutionlivecheck{
+.tutionlivecheck {
   position: relative;
-    background-color: white;
-    margin-left: 20%;
-    margin-top: 12%;
-    border-radius: 15px;
-    display: flex;
-    height: 8vh;
-    width: 60%;
+  background-color: white;
+  margin-left: 20%;
+  margin-top: 12%;
+  border-radius: 15px;
+  display: flex;
+  height: 8vh;
+  width: 60%;
 
-    #check{
-        background-color: white;
-        margin-top: 10px;
-        margin-left: 150px;
-        font-size: 15px;
-        justify-content: center;
-        padding: 5px;
-        word-spacing: 2px;
-    }
-    #check-btn{
-        height: 6vh;
-        width: 20%;
-        background-color: white;
-        font-size: 16px;
-        color: rgba(208,175,98,255);
-        letter-spacing: 2px;
-        border: 1px solid rgba(208,175,98,255);
-        border-radius: 20px;
-        margin-left: 50px;
-        cursor: pointer;
-        margin-top: 7px;
-    }
-    #check-btn:hover{
-        background-color: rgba(208,175,98,255);
-        color: white;
-    }
-    #cross{
-        background-color: transparent;
-        cursor: pointer;
-        margin-left: 110px;
-        margin-top: 7px;
-        background-color: black;
-        color: white;
-        height: 10px;
-        width: 10px;
-        border-radius: 50%;
-        padding: 1px;
-        }
-    
+  #check {
+    background-color: white;
+    margin-top: 10px;
+    margin-left: 150px;
+    font-size: 15px;
+    justify-content: center;
+    padding: 5px;
+    word-spacing: 2px;
+  }
+
+  #check-btn {
+    height: 6vh;
+    width: 20%;
+    background-color: white;
+    font-size: 16px;
+    color: rgba(208, 175, 98, 255);
+    letter-spacing: 2px;
+    border: 1px solid rgba(208, 175, 98, 255);
+    border-radius: 20px;
+    margin-left: 50px;
+    cursor: pointer;
+    margin-top: 7px;
+  }
+
+  #check-btn:hover {
+    background-color: rgba(208, 175, 98, 255);
+    color: white;
+  }
+
+  #cross {
+    background-color: transparent;
+    cursor: pointer;
+    margin-left: 110px;
+    margin-top: 7px;
+    background-color: black;
+    color: white;
+    height: 10px;
+    width: 10px;
+    border-radius: 50%;
+    padding: 1px;
+  }
+
 }
 
-.ads{
+.ads {
   position: absolute;
   height: 25vh;
   background-color: white;
   width: 70%;
-  margin:100px;
- top: 60%;
- margin-left: 200px;
- border-radius: 10px;
+  margin: 100px;
+  top: 60%;
+  margin-left: 200px;
+  border-radius: 10px;
 
-  #ads-cross{
+  #ads-cross {
     position: absolute;
     background-color: transparent;
     cursor: pointer;
@@ -255,22 +259,23 @@ li:hover{
     width: 10px;
     border-radius: 50%;
     padding: 1px;
-    }
+  }
 
 }
 
 
-.form{
+.form {
   background-color: white;
   height: 100%;
   width: 40%;
   z-index: 10000;
   position: absolute;
   top: 300%;
-  left: 55%;  
+  left: 55%;
   border-radius: 10px;
 
-  #staffbtn,#studentbtn{
+  #staffbtn,
+  #studentbtn {
     background-color: white;
     color: black;
     padding: 10px 82px;
@@ -278,26 +283,32 @@ li:hover{
     border: 1px solid gold;
     border-radius: 20px;
   }
-  form{
+
+  form {
     background-color: white;
   }
+
   label {
     position: relative;
     background: transparent;
     margin-left: 80px;
     margin-top: 20px;
-    display: block; /* Ensures margin-top works as expected */
+    display: block;
+    /* Ensures margin-top works as expected */
   }
-  input{
+
+  input {
     position: absolute;
     margin-left: 200px;
-    border: 1px solid rgba(208,175,98,255); ;
-    padding:8px;
+    border: 1px solid rgba(208, 175, 98, 255);
+    ;
+    padding: 8px;
     margin-top: -25px;
     width: 18vw;
     border-radius: 10px;
     background-color: white;
-  }  
+  }
+
   select {
     position: relative;
     left: 37%;
@@ -307,32 +318,31 @@ li:hover{
     border: none;
     border-radius: 10px;
   }
-  
 
-  button{
-    
+
+  button {
+
     margin-top: 50px;
     margin-left: 40px;
     padding: 10px 150px;
-    background-color:rgba(208,175,98,255);
+    background-color: rgba(208, 175, 98, 255);
     border: none;
     border-radius: 10px;
     margin-bottom: 30px;
 
   }
-  button a{
+
+  button a {
     text-decoration: none;
     color: black;
   }
-  option{
+
+  option {
     background-color: white;
   }
 
 }
-.form input:focus{
+
+.form input:focus {
   outline: none;
 }
-
-
-
-

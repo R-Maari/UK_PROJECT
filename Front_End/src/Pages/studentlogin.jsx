@@ -1,110 +1,40 @@
-import React from 'react';
-import { useForm } from 'react-hook-form';
-import { useDropzone } from 'react-dropzone';
-import './studentlogin.scss';
-
-const StudentLogin = () => {
-  const {  handleSubmit, register } = useForm();
-
-  const onDrop = (acceptedFiles) => {
-    // Handle file upload here
-    console.log('File uploaded:', acceptedFiles[0]);
-  };
-
-  const { getRootProps, getInputProps } = useDropzone({ onDrop });
-
-  const onSubmit = (data) => {
-    // Handle form submission here
-    console.log('Form Data:', data);
-  };
-
-  return (
-    <div className="container" >
-      <h2>Student Login</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div className="form-group">
-          <label htmlFor="name">Name:</label>
-          <input
-            id="name"
-            name="name"
-            type="text"
-            {...register('name', { required: true })}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="parentName">Parent Name:</label>
-          <input
-            id="parentName"
-            name="parentName"
-            type="text"
-            {...register('parentName', { required: true })}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="parentPhone">Parent Phone Number:</label>
-          <input
-            id="parentPhone"
-            name="parentPhone"
-            type="tel"
-            {...register('parentPhone', { required: true })}
-          />
-        </div>
-        <button type="submit">Next</button>
-        <div className="form-group">
-          <label htmlFor="dateOfBirth">Date of Birth:</label>
-          <input
-            id="dateOfBirth"
-            name="dateOfBirth"
-            type="date"
-            {...register('dateOfBirth', { required: true })}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="address">Address:</label>
-          <textarea
-            id="address"
-            name="address"
-            {...register('address', { required: true })}
-          ></textarea>
-        </div>
-        <button type="submit">Next</button>
-        <div className="form-group">
-          <label>Upload Photo:</label>
-          <div {...getRootProps({ className: 'dropzone' })}>
-            <input {...getInputProps()} />
-            <p>Drag 'n' drop some files here, or click to select files</p>
-          </div>
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="class">Class:</label>
-          <input
-            id="class"
-            name="class"
-            type="text"
-            {...register('class', { required: true })}
-          />
-        </div>
-
-        <div className="form-group">
-          <label htmlFor="subject">Subject(s) you are free:</label>
-          <input
-            id="subject"
-            name="subject"
-            type="text"
-            {...register('subject', { required: true })}
-          />
-        </div>
-
-        <button type="submit">Next</button>
-        
-      </form>
-    </div>
-  );
+import React, { Component } from 'react'
+import Logo from "../images/theos.png";
+import Sideimage from "../images/bgimg.jpg";
+import "./studentlogin.scss";
+const YourComponent = () => {
+  const [username, setUsername] = useState('');
 };
 
-export default StudentLogin;
+export class studentlogin extends Component {
+  render() {
+    return (
+      <div>
+        <div className='std-login-header'>
+          <img src={Logo} alt='std-login-logo'></img>
+          <span id='first-logo-name'>THEOS EDUCATIONAL ACADEMY</span><br></br>
+          <span id='second-logo-name'>THRIVING FOR PERFECTION</span>
+        </div>
 
+        <div className='container-std-login'>
+          <img src={Sideimage} alt='std-login-sideimage'></img>
+        </div>
+
+        <div className='form-container'>
+          <h1>STUDENT LOGIN</h1>
+          <form>
+            <label><h3>username</h3></label>
+            <input
+                  tyep="text"
+                  id="username"
+                  value={username}
+             />
+          </form>
+        </div>
+
+      </div>
+    )
+  }
+}
+
+export default studentlogin
